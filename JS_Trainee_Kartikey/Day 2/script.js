@@ -6,10 +6,10 @@ const quantityDiscountEl = document.getElementById('quantityDiscount');
 const priceDiscountEl = document.getElementById('priceDiscount');
 const finalTotalEl = document.getElementById('finalTotal');
 
-// Cart array to store added items
+
 let cart = [];
 
-// Function to display products
+
 function displayProducts(products) {
   productList.innerHTML = "";
   products.forEach((product, index) => {
@@ -23,13 +23,13 @@ function displayProducts(products) {
     productList.appendChild(div);
   });
 
-  // Add event listeners to buttons
+
   document.querySelectorAll('.product button').forEach(button => {
     button.addEventListener('click', (e) => {
       const idx = e.target.dataset.index;
       const selectedProduct = products[idx];
 
-      // Check if item is already in cart
+
       const existing = cart.find(item => item.name === selectedProduct.name);
       if (existing) {
         existing.quantity += 1;
@@ -37,14 +37,14 @@ function displayProducts(products) {
         cart.push({ ...selectedProduct, quantity: 1 });
       }
 
-    //   alert(`${selectedProduct.name} added to cart!`);
+
     });
   });
 }
 
-// Function to display cart and calculate totals
+
 function displayCart(cartItems) {
-  tbody.innerHTML = ""; // Clear table
+  tbody.innerHTML = ""; 
   cartItems.forEach(item => {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -71,7 +71,7 @@ function displayCart(cartItems) {
   finalTotalEl.textContent = finalTotal;
 }
 
-// Fetch products from API or fallback
+
 fetch('https://fakestoreapi.com/products')
   .then(res => res.json())
   .then(products => {
@@ -93,7 +93,7 @@ fetch('https://fakestoreapi.com/products')
     displayProducts(fallbackProducts);
   });
 
-// Calculate button
+  
 calculateBtn.addEventListener('click', () => {
   if (cart.length === 0) {
     alert("Cart is empty! Add items first.");
