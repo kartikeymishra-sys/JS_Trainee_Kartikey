@@ -1,0 +1,147 @@
+/* --- General Layout --- */
+body {
+  background-color: #f5f5f5;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- Form Card --- */
+.form-card {
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* --- Inputs & Buttons --- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+/* --- Theme Toggle Button --- */
+.theme-btn {
+  background-color: #007bff; /* Light mode */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-btn:hover {
+  background-color: #0056b3;
+}
+
+/* --- Error Text --- */
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 3px;
+  min-height: 14px;
+}
+
+/* --- Display Card --- */
+.display-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#displayBox {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  border: 1px solid #ddd;
+  /* removed fixed height, scroll appears naturally if needed */
+}
+
+/* --- Dark Theme --- */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark .form-card,
+body.dark .display-card {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark input,
+body.dark select {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #555;
+}
+
+body.dark #displayBox {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+/* --- Dark Mode Theme Button --- */
+body.dark .theme-btn {
+  background-color: #ffa500; /* Orange in dark mode */
+  color: #222;
+}
+
+body.dark .theme-btn:hover {
+  background-color: #cc8400;
+}
