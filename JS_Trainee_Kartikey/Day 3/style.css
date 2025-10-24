@@ -1,4 +1,4 @@
-/* --- General Layout --- */
+
 body {
   background-color: #f5f5f5;
   color: #222;
@@ -18,7 +18,6 @@ body {
   gap: 20px;
 }
 
-/* --- Form Card --- */
 .form-card {
   background-color: #fff;
   padding: 25px 30px;
@@ -33,7 +32,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* --- Inputs & Buttons --- */
 input[type="text"],
 input[type="email"],
 input[type="number"],
@@ -53,7 +51,6 @@ select {
   gap: 12px;
 }
 
-/* --- Submit Button --- */
 .submit-btn {
   background-color: #28a745;
   color: white;
@@ -69,9 +66,8 @@ select {
   background-color: #218838;
 }
 
-/* --- Theme Toggle Button --- */
 .theme-btn {
-  background-color: #007bff; /* Light mode */
+  background-color: #007bff; 
   color: white;
   border: none;
   padding: 8px 15px;
@@ -85,7 +81,6 @@ select {
   background-color: #0056b3;
 }
 
-/* --- Error Text --- */
 .error {
   color: red;
   font-size: 0.8rem;
@@ -93,7 +88,6 @@ select {
   min-height: 14px;
 }
 
-/* --- Display Card --- */
 .display-card {
   background-color: #fff;
   padding: 20px;
@@ -108,10 +102,8 @@ select {
   font-size: 0.9rem;
   white-space: pre-wrap;
   border: 1px solid #ddd;
-  /* removed fixed height, scroll appears naturally if needed */
 }
 
-/* --- Dark Theme --- */
 body.dark {
   background-color: #121212;
   color: #f5f5f5;
@@ -136,9 +128,8 @@ body.dark #displayBox {
   border-color: #444;
 }
 
-/* --- Dark Mode Theme Button --- */
 body.dark .theme-btn {
-  background-color: #ffa500; /* Orange in dark mode */
+  background-color: #ffa500; 
   color: #222;
 }
 
